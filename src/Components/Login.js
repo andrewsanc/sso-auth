@@ -5,6 +5,11 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  const onSubmitSignIn = () => {
+    console.log(`signing in with email: ${email}`);
+    console.log(`using password: ${password}`);
+  };
+
   return (
     <div className='card-login'>
       <h4>Welcome!</h4>
@@ -22,7 +27,7 @@ const Login = () => {
         type='password'
       />
       <a href='#'>Recover Password</a>
-      <button>Sign In</button>
+      <button onClick={() => onSubmitSignIn()}>Sign In</button>
     </div>
   );
 };
