@@ -5,7 +5,8 @@ const Login = ({ handleIsNewUser }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const onSubmitSignIn = () => {
+  const onSubmitSignIn = (e) => {
+    e.preventDefault();
     console.log(`signing in with email: ${email}`);
     console.log(`using password: ${password}`);
   };
@@ -28,15 +29,19 @@ const Login = ({ handleIsNewUser }) => {
           type='password'
         />
       </div>
-      <a href='#' className='card-link'>
+      <a href='#' onClick={(e) => e.preventDefault()} className='card-link'>
         Recover Password
       </a>
-      <button onClick={() => onSubmitSignIn()} className='button'>
+      <button onClick={(e) => onSubmitSignIn(e)} className='button'>
         Sign In
       </button>
       <p className='card-text'>
         Not a member?{" "}
-        <a href='#' onClick={handleIsNewUser} className='card-link small'>
+        <a
+          href='#'
+          onClick={(e) => handleIsNewUser(e)}
+          className='card-link small'
+        >
           Register Now
         </a>
       </p>

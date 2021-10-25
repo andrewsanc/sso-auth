@@ -11,7 +11,7 @@ const Register = ({ handleCancelRegistation }) => {
 
   return (
     <div className='card-login'>
-      <h4>Register</h4>
+      <h4>Create a New Account</h4>
       <div className='card-inputs'>
         <label htmlFor='email'>Email</label>
         <input

@@ -7,11 +7,13 @@ const App = () => {
   const [userIsLoggedIn, setUserIsLoggedIn] = useState(false);
   const [isNewUser, setIsNewUser] = useState(false);
 
-  const handleIsNewUser = () => {
+  const handleIsNewUser = (e) => {
+    e.preventDefault();
     setIsNewUser(true);
   };
 
-  const handleCancelRegistation = () => {
+  const handleCancelRegistation = (e) => {
+    e.preventDefault();
     setIsNewUser(false);
   };
 
