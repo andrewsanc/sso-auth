@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Login.css";
 
-const Register = () => {
+const Register = ({ handleCancelRegistation }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -29,10 +29,7 @@ const Register = () => {
       <button onClick={() => onSubmitRegister()} className='button primary'>
         Register
       </button>
-      <button
-        onClick={() => console.log("cancel")}
-        className='button secondary'
-      >
+      <button onClick={handleCancelRegistation} className='button secondary'>
         Cancel
       </button>
     </div>

@@ -5,10 +5,25 @@ import Register from "./Register";
 
 const App = () => {
   const [userIsLoggedIn, setUserIsLoggedIn] = useState(false);
+  const [isNewUser, setIsNewUser] = useState(false);
+
+  const handleIsNewUser = () => {
+    setIsNewUser(true);
+  };
+
+  const handleCancelRegistation = () => {
+    setIsNewUser(false);
+  };
 
   return (
     <div className='App'>
-      {userIsLoggedIn ? <div>Welcome!</div> : <Register />}
+      {userIsLoggedIn ? (
+        <div>Welcome!</div>
+      ) : isNewUser ? (
+        <Register handleCancelRegistation={handleCancelRegistation} />
+      ) : (
+        <Login handleIsNewUser={handleIsNewUser} />
+      )}
     </div>
   );
 };

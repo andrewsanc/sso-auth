@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Login.css";
 
-const Login = () => {
+const Login = ({ handleIsNewUser }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -36,7 +36,7 @@ const Login = () => {
       </button>
       <p className='card-text'>
         Not a member?{" "}
-        <a href='#' className='card-link small'>
+        <a href='#' onClick={handleIsNewUser} className='card-link small'>
           Register Now
         </a>
       </p>
