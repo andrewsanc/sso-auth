@@ -1,0 +1,6 @@
+.card-login {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 15px 30px;
+}
