@@ -27,7 +27,9 @@ const Login = () => {
         type='password'
       />
       <a href='#'>Recover Password</a>
-      <button onClick={() => onSubmitSignIn()}>Sign In</button>
+      <button onClick={() => onSubmitSignIn()} className='button'>
+        Sign In
+      </button>
     </div>
   );
 };
