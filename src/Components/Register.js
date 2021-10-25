@@ -1,19 +1,17 @@
 import React, { useState } from "react";
 import "./Login.css";
 
-const Login = () => {
+const Register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const onSubmitSignIn = () => {
-    console.log(`signing in with email: ${email}`);
-    console.log(`using password: ${password}`);
+  const onSubmitRegister = () => {
+    console.log("registering");
   };
 
   return (
     <div className='card-login'>
-      <h4>Welcome!</h4>
-      <h5>Sign into your account</h5>
+      <h4>Register</h4>
       <div className='card-inputs'>
         <label htmlFor='email'>Email</label>
         <input
@@ -28,20 +26,17 @@ const Login = () => {
           type='password'
         />
       </div>
-      <a href='#' className='card-link'>
-        Recover Password
-      </a>
-      <button onClick={() => onSubmitSignIn()} className='button'>
-        Sign In
+      <button onClick={() => onSubmitRegister()} className='button primary'>
+        Register
       </button>
-      <p className='card-text'>
-        Not a member?{" "}
-        <a href='#' className='card-link small'>
-          Register Now
-        </a>
-      </p>
+      <button
+        onClick={() => console.log("cancel")}
+        className='button secondary'
+      >
+        Cancel
+      </button>
     </div>
   );
 };
 
-export default Login;
+export default Register;
