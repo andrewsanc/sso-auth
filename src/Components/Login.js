@@ -34,6 +34,12 @@ const Login = () => {
       <button onClick={() => onSubmitSignIn()} className='button'>
         Sign In
       </button>
+      <p className='card-text'>
+        Not a member?{" "}
+        <a href='#' className='card-link small'>
+          Register Now
+        </a>
+      </p>
     </div>
   );
 };
